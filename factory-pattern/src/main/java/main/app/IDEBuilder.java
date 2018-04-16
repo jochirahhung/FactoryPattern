@@ -25,7 +25,7 @@ public class IDEBuilder extends Application{
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("IDE Builder");
 		showMainView(); 
-	}
+	} 
 	
 	
 	private void showMainView() throws IOException{

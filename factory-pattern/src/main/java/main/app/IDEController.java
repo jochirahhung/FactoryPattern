@@ -19,7 +19,7 @@ public class IDEController implements Initializable {
 	@FXML public TextArea textArea;  
 //	@FXML public TextField textField; 
 //	@FXML public TextField height;
-//	@FXML public TextField width;
+//	@FXML public TextField width; 
 //	@FXML public TextField top;
 //	@FXML public TextField left; 
 	 
@@ -54,9 +54,12 @@ public class IDEController implements Initializable {
 		textArea.setText("html was pushed"); 
 	}
 	
+	public void javaButtonPushed(){
+		textArea.setText("java was pushed"); 
+	} 
 	
-	public void submitButtonPushed(){
-		
+	public void submitButtonPushed(){ 
+		textArea.setText("submit was pushed"); 
 	}
 	
 	public void undoButtonPushed(){
