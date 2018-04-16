@@ -69,8 +69,8 @@ public class IDEBuilder extends Application{
 		HtmlTextField t = new HtmlTextField();
 		html.append("<html><head><title> Test </title></head>");
 		html.append("<body>");
-		b.buildComponent(html);
-		t.buildComponent(html);
+		b.buildComponent(html, 100, 500, 15, 40, "Hello");
+		t.buildComponent(html, 100, 5000, 15, 40, "Hello");
 		html.append("</body>");
 		try {
 			WriteToFile(html.toString(), "test.html");
@@ -81,7 +81,7 @@ public class IDEBuilder extends Application{
 	} 
 	
 	public static void main(String[] args){ 
-		launch(args); 
+		launch(args);  
 	} 
 	
 }

@@ -7,7 +7,7 @@ public class JavaFxTextField implements Components {
 		return null;
 	}
 
-	public StringBuilder buildComponent(StringBuilder html) {
+	public StringBuilder buildComponent(StringBuilder html, int height, int width, int left, int top, String text) {
 		// TODO Auto-generated method stub
 		return null;
 	}

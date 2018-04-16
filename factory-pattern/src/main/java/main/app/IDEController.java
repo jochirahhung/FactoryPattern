@@ -22,7 +22,7 @@ public class IDEController implements Initializable {
 //	@FXML public TextField width; 
 //	@FXML public TextField top;
 //	@FXML public TextField left; 
-	 
+	@FXML public IDEBuilder b = new IDEBuilder();
 	 
 	private String displayArea = "";
 	private List<String> usedItems = new ArrayList<String>(); 
@@ -51,7 +51,7 @@ public class IDEController implements Initializable {
 	}
 	
 	public void htmlButtonPushed(){
-		textArea.setText("html was pushed"); 
+		b.widget();
 	}
 	
 	public void javaButtonPushed(){
