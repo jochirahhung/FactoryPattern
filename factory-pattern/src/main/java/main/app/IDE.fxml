@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -24,7 +25,12 @@
             </Label>
             <Pane layoutX="163.0" prefHeight="506.0" prefWidth="644.0" style="-fx-background-color: #2B3033;">
                <children>
-                  <Button graphicTextGap="0.0" layoutX="488.0" layoutY="366.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="57.0" prefWidth="158.0" style="-fx-background-color: #333A3D;" text="  J A V A   " textAlignment="RIGHT">
+                  <TextArea fx:id="textArea" editable="false" layoutX="1.0" layoutY="423.0" prefHeight="87.0" prefWidth="667.0" style="-fx-control-inner-background:#2B3033; -fx-background-radius: 0;" wrapText="true"> 
+                     <font>
+                        <Font name="Calibri Light Italic" size="10.0" /> 
+                     </font>
+                  </TextArea>
+                  <Button graphicTextGap="0.0" layoutX="488.0" layoutY="366.0" mnemonicParsing="false" onAction="#addButtonPushed" prefHeight="57.0" prefWidth="158.0" style="-fx-background-color: #333A3D;" text="  J A V A   " textAlignment="RIGHT">
                      <font>
                         <Font name="Calibri Light Italic" size="24.0" />
                      </font>
@@ -50,7 +56,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button graphicTextGap="0.0" layoutX="589.0" layoutY="7.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="50.0" style="-fx-background-color: #333A3D;" textAlignment="RIGHT">
+                  <Button graphicTextGap="0.0" layoutX="589.0" layoutY="7.0" mnemonicParsing="false" onAction="#undoButtonPushed" prefHeight="42.0" prefWidth="50.0" style="-fx-background-color: #333A3D;" textAlignment="RIGHT">
                      <font>
                         <Font name="Calibri Light Italic" size="24.0" />
                      </font>
@@ -76,10 +82,10 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button graphicTextGap="0.0" layoutX="488.0" layoutY="435.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="159.0" style="-fx-background-color: #333A3D;" text="  H T M L " textAlignment="RIGHT">
-                     <font>
+                  <Button graphicTextGap="0.0" layoutX="488.0" layoutY="435.0" mnemonicParsing="false" onAction="#htmlButtonPushed" prefHeight="50.0" prefWidth="159.0" style="-fx-background-color: #333A3D;" text="  H T M L " textAlignment="RIGHT">
+                     <font> 
                         <Font name="Calibri Light Italic" size="24.0" />
-                     </font>
+                     </font> 
                      <padding>
                         <Insets top="1.0" />
                      </padding>
@@ -102,9 +108,56 @@
                         </ImageView>
                      </graphic>
                   </Button>
+                  <Label contentDisplay="RIGHT" layoutX="150.0" layoutY="14.0" text="P r o p e r t i e s ">
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#18d2d9" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <font>
+                        <Font name="System Italic" size="45.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="RIGHT" layoutX="182.0" layoutY="151.0" prefHeight="18.0" prefWidth="242.0" text="Height " textFill="WHITE">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="RIGHT" layoutX="196.0" layoutY="199.0" text="Width" textFill="WHITE">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="RIGHT" layoutX="220.0" layoutY="298.0" text="Top" textFill="WHITE">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="RIGHT" layoutX="163.0" layoutY="105.0" text="Text Field" textFill="WHITE">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="RIGHT" layoutX="222.0" layoutY="246.0" text="Left" textFill="WHITE">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Button contentDisplay="GRAPHIC_ONLY" layoutX="234.0" layoutY="342.0" mnemonicParsing="false" onAction="#submitButtonPushed" prefHeight="49.0" prefWidth="191.0" style="-fx-background-color: #2B3033;" text="Button">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@btnsubmit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
                </children>
             </Pane>
-            <Button blendMode="SRC_ATOP" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="46.0" layoutY="426.0" mnemonicParsing="false" onAction="#handleButtonAction" text="ADD 2 SCENE">
+            <Button blendMode="SRC_ATOP" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="46.0" layoutY="426.0" mnemonicParsing="false" onAction="#addButtonPushed" text="ADD 2 SCENE">
                <graphic>
                   <ImageView fitHeight="42.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
                      <image>

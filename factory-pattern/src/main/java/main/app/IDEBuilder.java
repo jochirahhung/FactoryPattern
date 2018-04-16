@@ -27,6 +27,7 @@ public class IDEBuilder extends Application{
 		showMainView(); 
 	}
 	
+	
 	private void showMainView() throws IOException{
 		FXMLLoader loader = new FXMLLoader(); 
 		loader.setLocation(IDEBuilder.class.getResource("IDE.fxml"));
@@ -62,22 +63,6 @@ public class IDEBuilder extends Application{
     }
 	
 	public void widget() {
-	/*  JPanel panel = new JPanel(new BorderLayout());
-		JFrame window = new JFrame();
-		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		JTextField text = new JTextField();
-		JPanel outerPanel = new JPanel();
-		JColorChooser button1 = new JColorChooser();
-		text.setColumns(8);
-		
-		panel.add(text, BorderLayout.CENTER);
-		panel.add(button1, BorderLayout.AFTER_LAST_LINE);
-		outerPanel.add(panel, BorderLayout.BEFORE_FIRST_LINE);
-		
-		window.add(outerPanel);
-		window.setSize(1000, 1000);
-		window.setVisible(true);
-	*/
 		
 		StringBuilder html = new StringBuilder();
 		HtmlButton b = new HtmlButton();
@@ -93,9 +78,6 @@ public class IDEBuilder extends Application{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-
 	} 
 	
 	public static void main(String[] args){ 
